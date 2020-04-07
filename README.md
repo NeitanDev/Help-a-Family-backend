@@ -23,3 +23,7 @@
 > yarn sequelize migration:create --name=create-organizacoes
 
 > yarn sequelize db:migrate
+
+> yarn sequelize migration:create --name=create-familias
+
+>yarn sequelize db:migrate
