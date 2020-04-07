@@ -9,7 +9,7 @@ module.exports = {
         autoIncrement: true,
         allowNull: false,
       },
-      id_familia: {
+      id_organizacao: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: { model: 'organizacoes', key: 'id' },

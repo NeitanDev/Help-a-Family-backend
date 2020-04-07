@@ -1,4 +1,5 @@
 const Familias = require('../models/Familias');
+const Fam_localizacoes = require('../models/Fam_localizacoes');
 
 module.exports = {
     async create(req, res) {
@@ -11,6 +12,10 @@ module.exports = {
             mensagem,
             telefone,
             whatsapp,
+            longitude,
+            latitude,
+            endereco,
+            number,
         } = req.body;
 
         const familia = await Familias.create({
@@ -24,6 +29,16 @@ module.exports = {
             whatsapp,
         });
 
-        return res.json(familia);
+        const { id } = familia;
+
+        const fam_local = await Fam_localizacoes.create({
+            id_familia: id,
+            longitude,
+            latitude,
+            endereco,
+            number,
+        });
+
+        return res.json({ familia, fam_local });
     }
 }

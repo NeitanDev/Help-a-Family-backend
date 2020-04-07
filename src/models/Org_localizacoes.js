@@ -7,6 +7,7 @@ class Org_localizacoes extends Model {
             latitude: DataTypes.DECIMAL,
             endereco: DataTypes.STRING,
             number: DataTypes.INTEGER,
+            id_organizacao: DataTypes.INTEGER,
         }, {
             sequelize: connection,
         })

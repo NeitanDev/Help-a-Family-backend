@@ -7,6 +7,7 @@ class Fam_localizacoes extends Model {
             latitude: DataTypes.DECIMAL,
             endereco: DataTypes.STRING,
             number: DataTypes.INTEGER,
+            id_familia: DataTypes.INTEGER,
         }, {
             sequelize: connection,
         })
