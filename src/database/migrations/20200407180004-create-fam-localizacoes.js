@@ -24,6 +24,14 @@ module.exports = {
         type: Sequelize.DECIMAL,
         allowNull: false,
       },
+      endereco: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      number: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false,
