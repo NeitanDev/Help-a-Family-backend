@@ -32,6 +32,6 @@
 
 > yarn sequelize db:migrate
 
-> yarn sequelize migration:create --name=create-fam-localizacoes
+> yarn sequelize migration:create --name=create-org-localizacoes
 
 > yarn sequelize db:migrate
