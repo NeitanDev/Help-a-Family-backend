@@ -17,3 +17,5 @@
 > yarn add sequelize-cli -D
 
 > yarn add nodemon -D
+
+> yarn sequelize db:create
