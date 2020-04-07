@@ -19,3 +19,5 @@
 > yarn add nodemon -D
 
 > yarn sequelize db:create
+
+> yarn sequelize migration:create --name=create-organizacoes
