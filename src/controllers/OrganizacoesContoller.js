@@ -6,7 +6,7 @@ module.exports = {
 
     async list(req, res) {
         const organizations = await connection.query("SELECT nome, telefone, whatsapp, longitude, latitude, endereco, number FROM organizacoes, org_localizacoes WHERE org_localizacoes.id_organizacao= organizacoes.id ORDER BY organizacoes.id;",
-            { type: connection.QueryTypes.SELECT })
+            { type: connection.QueryTypes.SELECT });
 
         return res.json(organizations);
     },
