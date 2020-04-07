@@ -13,5 +13,6 @@ routes.get('/list/organizacao', OrganizacoesContoller.list);
 routes.post('/create/organizacao', OrganizacoesContoller.create);
 
 routes.post('/login/org', LoginController.loginOrg);
+routes.post('/login/family', LoginController.loginFamily);
 
 module.exports = routes;

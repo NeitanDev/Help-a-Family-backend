@@ -15,4 +15,16 @@ module.exports = {
 
         return res.json(response);
     },
+    async loginFamily(req, res) {
+        const { chave, senha } = req.body;
+        const response = await Familias.findOne({
+            attributes: ['id', 'Sobrenome'],
+            where: {
+                chave,
+                senha
+            },
+        });
+
+        return res.json(response);
+    },
 };
