@@ -39,3 +39,5 @@
 > yarn sequelize migration:create --name=create-historico
 
 > yarn sequelize db:migrate
+
+> Acredito que o backend da aplicação estjá finalizado
