@@ -5,6 +5,7 @@ const OrganizacoesContoller = require('./controllers/OrganizacoesContoller');
 const FamiliasController = require('./controllers/FamiliasController');
 const LoginController = require('./controllers/LoginController');
 const HistoricoController = require('./controllers/HistoricoController');
+const MapController = require('./controllers/MapController')
 
 
 routes.get('/list/familia', FamiliasController.list);
@@ -19,5 +20,7 @@ routes.post('/login/family', LoginController.loginFamily);
 routes.post('/create/:id_familia/historico', HistoricoController.createHelp);
 routes.get('/historico/familyList', HistoricoController.familyList);
 routes.get('/historico/orgList', HistoricoController.orgList);
+
+routes.get('/map/familyList', MapController.listFamilias);
 
 module.exports = routes;
