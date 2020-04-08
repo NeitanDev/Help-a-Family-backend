@@ -8,6 +8,7 @@ class Historico extends Model {
             data: DataTypes.DATE,
         }, {
             sequelize: connection,
+            tableName: 'historico'
         })
     }
 };

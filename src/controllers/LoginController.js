@@ -1,6 +1,5 @@
 const Familias = require('../models/Familias');
 const Organizacoes = require('../models/Organizacoes');
-const connection = require('../database/index');
 
 module.exports = {
     async loginOrg(req, res) {
