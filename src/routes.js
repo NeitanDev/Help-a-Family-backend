@@ -8,10 +8,10 @@ const HistoricoController = require('./controllers/HistoricoController');
 const MapController = require('./controllers/MapController')
 
 
-routes.get('/list/familia', FamiliasController.list);
+routes.get('/list/familia', FamiliasController.list); ///rota que não vai ser usada na aplicação
 routes.post('/create/familia', FamiliasController.create);
 
-routes.get('/list/organizacao', OrganizacoesContoller.list);
+routes.get('/list/organizacao', OrganizacoesContoller.list); ///rota que não vai ser usada na aplicação
 routes.post('/create/organizacao', OrganizacoesContoller.create);
 
 routes.post('/login/org', LoginController.loginOrg);
