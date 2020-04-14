@@ -47,3 +47,5 @@
 > vou precisar add algumas rotas no back da aplicação:
 
 > 1°- rota de informações de uma familia para a pagina de detalhes da familia (acho que essa é a unica)
+
+> acabei nem precisando da rota extra, juntei todas as informações nas requisições do mapa, e o frontend usa essa mesma rota pras duas paginas
