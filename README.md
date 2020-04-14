@@ -41,3 +41,9 @@
 > yarn sequelize db:migrate
 
 > Acredito que o backend da aplicação estjá finalizado
+
+### Observações:
+
+> vou precisar add algumas rotas no back da aplicação:
+
+> 1°- rota de informações de uma familia para a pagina de detalhes da familia (acho que essa é a unica)
