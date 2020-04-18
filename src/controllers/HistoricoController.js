@@ -27,7 +27,7 @@ module.exports = {
     async orgList(req, res) {
         const id_org = req.headers.authorization;
 
-        const ajudas = await connection.query(`SELECT familias.sobrenome, historico.data FROM familias, historico WHERE id_familia = familias.id AND id_organizacao = ${id_org}`,
+        const ajudas = await connection.query(`SELECT historico.id, familias.sobrenome, historico.data FROM familias, historico WHERE id_familia = familias.id AND id_organizacao = ${id_org} ORDER BY historico.id DESC`,
             { type: connection.QueryTypes.SELECT });
 
         return res.json(ajudas);
