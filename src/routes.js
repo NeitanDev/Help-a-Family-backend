@@ -17,7 +17,7 @@ routes.post('/create/organizacao', OrganizacoesContoller.create);
 routes.post('/login/org', LoginController.loginOrg);
 routes.post('/login/family', LoginController.loginFamily);
 
-routes.post('/create/:id_familia/historico', HistoricoController.createHelp);
+routes.post('/create/:id_familia/historico/:id_organizacao', HistoricoController.createHelp);
 routes.get('/historico/familyList', HistoricoController.familyList);
 routes.get('/historico/orgList/:id_org', HistoricoController.orgList);
 

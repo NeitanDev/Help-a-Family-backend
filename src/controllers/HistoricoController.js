@@ -5,8 +5,8 @@ const Historico = require('../models/Historico');
 
 module.exports = {
     async createHelp(req, res) {
-        const id_organizacao = req.headers.authorization;
-        const { id_familia } = req.params;
+        // const id_organizacao = req.headers.authorization;
+        const { id_familia, id_organizacao } = req.params;
         const data = new Date();
         const response = await Historico.create({
             id_familia,
