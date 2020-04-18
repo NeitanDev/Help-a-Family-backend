@@ -5,7 +5,7 @@ const connection = require('../database/index');
 module.exports = {
 
     async list(req, res) {
-        const family = await connection.query("SELECT id ,nome, sobrenome, qtd_membros, mensagem, telefone, whatsapp, longitude, latitude, endereco, number FROM familias, fam_localizacoes WHERE fam_localizacoes.id_familia= familias.id ORDER BY familias.id",
+        const family = await connection.query("SELECT familias.id ,nome, sobrenome, qtd_membros, mensagem, telefone, whatsapp, longitude, latitude, endereco, number FROM familias, fam_localizacoes WHERE fam_localizacoes.id_familia= familias.id ORDER BY familias.id",
             { type: connection.QueryTypes.SELECT });
 
         return res.json(family);

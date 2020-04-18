@@ -19,7 +19,7 @@ routes.post('/login/family', LoginController.loginFamily);
 
 routes.post('/create/:id_familia/historico', HistoricoController.createHelp);
 routes.get('/historico/familyList', HistoricoController.familyList);
-routes.get('/historico/orgList', HistoricoController.orgList);
+routes.get('/historico/orgList/:id_org', HistoricoController.orgList);
 
 routes.get('/map/familyList', MapController.listFamilias);
 
