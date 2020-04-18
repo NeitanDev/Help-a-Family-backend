@@ -27,7 +27,7 @@ module.exports = {
     async orgList(req, res) {
         const {id_org} = req.params;
 
-        const ajudas = await connection.query(`SELECT historico.id, familias.sobrenome, historico.data FROM familias, historico WHERE id_familia = familias.id AND id_organizacao = ${id_org} ORDER BY historico.id DESC`,
+        const ajudas = await connection.query(`SELECT historico.id, familias.sobrenome, DATE_FORMAT(data,'%d/%m/%Y') AS data FROM familias, historico WHERE id_familia = familias.id AND id_organizacao = ${id_org} ORDER BY historico.id DESC`,
             { type: connection.QueryTypes.SELECT });
 
         return res.json(ajudas);
