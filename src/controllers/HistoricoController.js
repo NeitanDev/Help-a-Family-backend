@@ -14,7 +14,20 @@ module.exports = {
             data
         });
 
-        return res.json(response);
+        const ajuda = await connection.query(`SELECT historico.id, familias.sobrenome, DATE_FORMAT(data,'%d/%m/%Y') AS date FROM familias, historico WHERE id_familia = familias.id AND id_organizacao = ${id_organizacao}`,//AND historico.id = ${response.id}
+            { type: connection.QueryTypes.SELECT });
+
+
+        const { id, sobrenome, date } = ajuda[0];
+        const sounou = {
+            id,
+            sobrenome,
+            date
+        };
+        console.log(sounou);
+        req.io.emit('hist', ajuda);
+
+        return res.json(ajuda);
     },
     async familyList(req, res) {
         const id_familia = req.headers.authorization;
@@ -25,10 +38,12 @@ module.exports = {
         return res.json(ajudas);
     },
     async orgList(req, res) {
-        const {id_org} = req.params;
+        const { id_org } = req.params;
 
-        const ajudas = await connection.query(`SELECT historico.id, familias.sobrenome, DATE_FORMAT(data,'%d/%m/%Y') AS data FROM familias, historico WHERE id_familia = familias.id AND id_organizacao = ${id_org} ORDER BY historico.id DESC`,
+        const ajudas = await connection.query(`SELECT historico.id, familias.sobrenome, DATE_FORMAT(data,'%d/%m/%Y') AS date FROM familias, historico WHERE id_familia = familias.id AND id_organizacao = ${id_org} ORDER BY historico.id DESC`,
             { type: connection.QueryTypes.SELECT });
+
+
 
         return res.json(ajudas);
     }

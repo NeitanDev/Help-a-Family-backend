@@ -9,9 +9,17 @@ const app = express();
 const server = http.Server(app);
 const io = socketio(server);
 
-io.on('connection', socket =>{
-    console.log('usuario conectado', socket.id);
-});
+
+app.use((req, res, next)=>{
+    req.io = io;
+    next();
+})
+
+// io.on('connection', socket =>{
+//     console.log('usuario conectado', socket.id);
+
+//     socket.emit('hello','Word');
+// });
 
 app.use(express.json());
 app.use(routes);
