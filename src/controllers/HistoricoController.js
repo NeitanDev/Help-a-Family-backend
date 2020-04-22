@@ -14,7 +14,7 @@ module.exports = {
             data
         });
 
-        const ajuda = await connection.query(`SELECT historico.id, familias.sobrenome, DATE_FORMAT(data,'%d/%m/%Y') AS date FROM familias, historico WHERE id_familia = familias.id AND id_organizacao = ${id_organizacao}`,//AND historico.id = ${response.id}
+        const ajuda = await connection.query(`SELECT historico.id, familias.sobrenome, DATE_FORMAT(data,'%d/%m/%Y') AS date FROM familias, historico WHERE id_familia = familias.id AND id_organizacao = ${id_organizacao} ORDER BY historico.id DESC`,//AND historico.id = ${response.id}
             { type: connection.QueryTypes.SELECT });
 
 
