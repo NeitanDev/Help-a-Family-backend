@@ -1,51 +1,56 @@
-# Help a Family
+<h1 align="center">
+    <img alt="Help a Famili" title="#delicinha" src="./screenshots/LogoVerde.png" width="200px" />
+</h1>
 
-> Esse projeto é uma especie de adapitação do projeto RadarDev da semana omnistack 10, mas nesse projeto familias que precisam de um suporte com uma cesta basica nessa epoca de pandemia. Essas familis se cadastram nesse sistema, com algumas informações e incluindo localização. Ai organizações como por exemplo igrejas que fazem doações, vão ter acesso a essa localização atraves de um aplicativo com um mapa que contém as localizações das familias
+<h4 align="center">
+  🚀 Help a Family
+</h4>
 
-> Observações: eu sei que se uma familia precisa de ajuda com uma cesta basica, talves não tenha acesso a  internet, mas esse é só um projeto para aprender a usar nodejs, reactjs, e react-native, não vou colocar em produção 
+<p align="center">
+  <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-video-do-projeto">Video</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-contato">Contato</a>
+</p>
 
-## Descrição:
+<br>
 
->  Este é um projeto feito em nodejs e usando express com o orm sequelize e um banco de dados mysql
+<p align="center">
+  <img alt="BeTheHero" src="./screenshots/Githubimage.png" width="100%">
+</p>
 
-### Comandos:
+## :rocket: Tecnologias
 
-> yarn init -y
+Esse projeto foi desenvolvido utilizando:
 
-> yarn add express mysql2 sequelize
+- [Node.js](https://nodejs.org/en/)
+- [Express](https://expressjs.com/pt-br/)
+- [Sequelize](https://sequelize.org/v5/)
+- [MySQL](https://www.mysql.com/)
+- [Socket.io](https://socket.io/docs)
+- [React Native](https://facebook.github.io/react-native/)
+- [Expo](https://expo.io/)
+- [React Navigation](https://reactnavigation.org/)
+- [Styled Components](https://styled-components.com/)
+- [Axios](https://github.com/axios/axios)
+- [Socket.io-client](https://socket.io/docs/client-api/)
 
-> yarn add sequelize-cli -D
+## 💻 Projeto
 
-> yarn add nodemon -D
+O Help a Famly é um projeto que visa posibilitar que entidades de ajudas sociais possam ver as localidades onde há familias que necessitam de ajuda e possam entrar em contato com a familia para ajuda-los.
 
-> yarn sequelize db:create
+## Video do Projeto
 
-> yarn sequelize migration:create --name=create-organizacoes
+Neste video explico melhor sobre o app e o intuito
 
-> yarn sequelize db:migrate
+- [Video no Instagram]()
 
-> yarn sequelize migration:create --name=create-familias
+## 📧 Contato
 
-> yarn sequelize db:migrate
+- Email: natan.miranda02@gmail.com
+- [Linkdin](https://www.linkedin.com/in/natan-bezerra-de-miranda-0b4b93180/)
+- [Instagram](https://www.instagram.com/neitan_miranda02/)
 
-> yarn sequelize migration:create --name=create-fam-localizacoes
+---
 
-> yarn sequelize db:migrate
-
-> yarn sequelize migration:create --name=create-org-localizacoes
-
-> yarn sequelize db:migrate
-
-> yarn sequelize migration:create --name=create-historico
-
-> yarn sequelize db:migrate
-
-> Acredito que o backend da aplicação estjá finalizado
-
-### Observações:
-
-> vou precisar add algumas rotas no back da aplicação:
-
-> 1°- rota de informações de uma familia para a pagina de detalhes da familia (acho que essa é a unica)
-
-> acabei nem precisando da rota extra, juntei todas as informações nas requisições do mapa, e o frontend usa essa mesma rota pras duas paginas
+Feito com ♥ by Natan Bezerra de Miranda :wave:
