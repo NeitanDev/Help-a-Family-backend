@@ -5,10 +5,9 @@ const Historico = require('../models/Historico');
 
 module.exports = {
     async createHelp(req, res) {
-        // const id_organizacao = req.headers.authorization;
         const { id_familia, id_organizacao } = req.params;
         const data = new Date();
-        const response = await Historico.create({
+        await Historico.create({
             id_familia,
             id_organizacao,
             data
@@ -17,14 +16,6 @@ module.exports = {
         const ajuda = await connection.query(`SELECT historico.id, familias.sobrenome, DATE_FORMAT(data,'%d/%m/%Y') AS date FROM familias, historico WHERE id_familia = familias.id AND id_organizacao = ${id_organizacao} ORDER BY historico.id DESC`,//AND historico.id = ${response.id}
             { type: connection.QueryTypes.SELECT });
 
-
-        const { id, sobrenome, date } = ajuda[0];
-        const sounou = {
-            id,
-            sobrenome,
-            date
-        };
-        console.log(sounou);
         req.io.emit('hist', ajuda);
 
         return res.json(ajuda);
