@@ -1,4 +1,3 @@
-//const Familias = require('../models/Familias');
 const connection = require('../database/index');
 
 module.exports = {

@@ -1,5 +1,3 @@
-const Familias = require('../models/Familias');
-const Organizacoes = require('../models/Organizacoes');
 const connection = require('../database/index');
 const Historico = require('../models/Historico');
 

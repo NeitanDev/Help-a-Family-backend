@@ -13,13 +13,7 @@ const io = socketio(server);
 app.use((req, res, next)=>{
     req.io = io;
     next();
-})
-
-// io.on('connection', socket =>{
-//     console.log('usuario conectado', socket.id);
-
-//     socket.emit('hello','Word');
-// });
+});
 
 app.use(express.json());
 app.use(routes);
