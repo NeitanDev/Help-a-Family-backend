@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Help a Famili" title="#delicinha" src="./screenshots/LogoVerde.png" width="200px" />
+    <img alt="Help a Family" title="#delicinha" src="./screenshots/LogoVerde.png" width="200px" />
 </h1>
 
 <h4 align="center">
@@ -16,7 +16,7 @@
 <br>
 
 <p align="center">
-  <img alt="BeTheHero" src="./screenshots/Githubimage.png" width="100%">
+  <img alt="Help a family" src="./screenshots/Githubimage.png" width="100%">
 </p>
 
 ## :rocket: Tecnologias
